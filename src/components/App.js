@@ -1,9 +1,9 @@
 import React from 'react';
-import Wikipedia from './Wikipedia';
+import SearchBar from './SearchBar';
 
 class App extends React.Component {
     render() {
-        return <div><Wikipedia /></div>
+        return <div><SearchBar /></div>;
     }
 }
 
