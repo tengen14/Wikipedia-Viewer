@@ -1,10 +1,10 @@
-import _ from "lodash";
 import React from "react";
 import SearchBar from "./SearchBar";
+import ArticleList from "./ArticleList";
 //import fetchData from "../apis/wikipediaAPI";
 
 class App extends React.Component {
-  state = { titles: null, snippets: null };
+  state = { articles: [] };
 
   onSearchSubmit = term => {
     const fetchPromise = fetch(
@@ -16,25 +16,11 @@ class App extends React.Component {
         return response.json();
       })
       .then(data => {
-        console.log(data);
+        const articles = data.query.search;
+    
+        this.setState({ articles: articles });
 
-        const searchData = data.query.search;
-
-        //function that sorts api data into 2 separate arrays of data, 'titles' and 'snippets'
-        const titles = [];
-        const snippets = [];
-        for (let entry of searchData) {
-          console.log(entry);
-          const title = _.pick(entry, ["title"]).title;
-          const snippet = _.pick(entry, ["snippet"]).snippet;
-
-          titles.push(title);
-          snippets.push(snippet);
-        }
-        this.setState({ titles: titles, snippets: snippets });
-
-        console.log("state", this.state.titles, this.state.snippets);
-        console.log(term);
+        console.log("state", this.state.articles);
       });
   };
 
@@ -42,8 +28,7 @@ class App extends React.Component {
     return (
       <div>
         <SearchBar onSubmit={this.onSearchSubmit} />
-        <h1>{this.state.titles}</h1>
-        <p>{this.state.snippets}</p>
+        <ArticleList articles={this.state.articles}/>
       </div>
     );
   }
