@@ -8,7 +8,7 @@ class App extends React.Component {
 
   onSearchSubmit = term => {
     const fetchPromise = fetch(
-      `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${term}&srlimit=20&format=json&origin=*`
+      `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${term}&srlimit=15&format=json&origin=*`
     );
 
     fetchPromise

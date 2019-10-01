@@ -1,4 +1,5 @@
 import React from "react";
+import ArticleCard from "./ArticleCard";
 
 class ArticleList extends React.Component {
   componentDidMount() {}
@@ -6,27 +7,25 @@ class ArticleList extends React.Component {
   getIds = props => {
     console.log("GETIDS FUNCTION RUNS");
     const articles = this.props.articles;
-    console.log(articles.snippet);
 
-    return articles.map(article => 
-        <div>
-          <li>{article.title}</li> 
-            <span>{article.pageid}</span>
-          <p>{article.snippet}</p>
-        </div>
-    );
+    return articles.map(article => (
+        <ArticleCard
+          key={article.id}
+          title={article.title}
+          snippet={article.snippet}
+          pageid={article.pageid}
+        />
+    ));
   };
 
   render() {
     return (
       <div>
-        <h1>Titles</h1>
+        <h1>Articles</h1>
         <ul>{this.getIds()}</ul>
       </div>
     );
   }
 }
-
-
 
 export default ArticleList;

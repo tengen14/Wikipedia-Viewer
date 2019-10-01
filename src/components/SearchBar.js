@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/ArticleCard.css";
 
 class SearchBar extends React.Component {
   state = { term: "" };
@@ -7,21 +8,25 @@ class SearchBar extends React.Component {
     event.preventDefault();
     ////////////////////////////////////
     this.props.onSubmit(this.state.term);
+    console.log(this.state.term);
   };
 
   render() {
     return (
-      <form onSubmit={this.onSubmitForm}>
-        <div className="ui huge icon input">
-          <input
-            type="text"
-            placeholder="Search"
-            value={this.state.term}
-            onChange={e => this.setState({ term: e.target.value })}
-          />
-          <i className="search icon"></i>
-        </div>
-      </form>
+      <div className="search-bar">
+        <form onSubmit={this.onSubmitForm}>
+          <div className="ui search">
+            <input
+              class="prompt"
+              type="text"
+              placeholder="Search"
+              value={this.state.term}
+              onChange={e => this.setState({ term: e.target.value })}
+            />
+            <div className="results"></div>
+          </div>
+        </form>
+      </div>
     );
   }
 }

@@ -1,0 +1,42 @@
+/* Article Card Styling */
+
+.ui.segment {
+  max-width: 65%;
+  position: relative;
+  margin: auto !important;
+  margin-bottom: 60px !important;
+  background-color:#505257;
+  color: white;
+}
+
+.ui.segment:hover {
+    border-left: 6px solid #cfc517;
+}
+
+h2.ui.header {
+    color: #dedede;
+    font-size: 26px;
+}
+
+p {
+    font-size: 16px;
+}
+
+hr {
+    color: black;
+}
+
+/* Search Bar Styling */
+
+.ui.search > .prompt {
+}
+
+/* Body styling */
+
+body {
+    background-color: #747880;
+}
+
+h1 {
+    color: white;
+}
