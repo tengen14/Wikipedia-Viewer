@@ -17,7 +17,7 @@ class App extends React.Component {
       })
       .then(data => {
         const articles = data.query.search;
-    
+
         this.setState({ articles: articles });
 
         console.log("state", this.state.articles);
@@ -27,11 +27,26 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar onSubmit={this.onSearchSubmit} />
-        <ArticleList articles={this.state.articles}/>
+        <div id="outer">
+          <div id="middle">
+            <div id="inner">
+              <h1>Search below for Wikipedia articles</h1>
+              <SearchBar onSubmit={this.onSearchSubmit} />
+              <a id="random-search"
+                href="https://en.wikipedia.org/wiki/Special:Random"
+                target="_blank"
+              >
+                or click here for a random article
+              </a>
+            </div>
+          </div>
+        </div>
+        <ArticleList articles={this.state.articles} />
       </div>
     );
   }
 }
 
 export default App;
+
+//style searchbar to center viewport

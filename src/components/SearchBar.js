@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
         <form onSubmit={this.onSubmitForm}>
           <div className="ui search">
             <input
-              class="prompt"
+              className="prompt"
               type="text"
               placeholder="Search"
               value={this.state.term}

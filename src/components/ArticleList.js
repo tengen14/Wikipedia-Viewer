@@ -21,7 +21,6 @@ class ArticleList extends React.Component {
   render() {
     return (
       <div>
-        <h1>Articles</h1>
         <ul>{this.getIds()}</ul>
       </div>
     );

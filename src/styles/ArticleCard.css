@@ -5,6 +5,7 @@
   position: relative;
   margin: auto !important;
   margin-bottom: 60px !important;
+  top: 500px;
   background-color:#505257;
   color: white;
 }
@@ -22,21 +23,44 @@ p {
     font-size: 16px;
 }
 
-hr {
-    color: black;
-}
-
-/* Search Bar Styling */
-
-.ui.search > .prompt {
-}
-
-/* Body styling */
-
+/* Body and Search Bar styling */
 body {
     background-color: #747880;
 }
 
 h1 {
     color: white;
+    font-size: 24px;
 }
+
+#random-search {
+    font-size: 18px;
+    position: relative;
+    top: 16px;
+    color: white;
+}
+
+.ui.search > .prompt {
+    width: 70%;
+}
+
+ #outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  #inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
