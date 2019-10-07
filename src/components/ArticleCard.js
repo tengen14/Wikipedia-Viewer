@@ -11,7 +11,7 @@ const ArticleCard = props => {
         <div className="ui segment">
           <h2 className="ui left floated header">{props.title}</h2>
           <div className="ui clearing divider"></div>
-          <p>{props.snippet}</p>
+          <p>{props.extract}</p>
         </div>
       </a>
     </div>

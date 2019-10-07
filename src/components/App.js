@@ -8,7 +8,7 @@ class App extends React.Component {
 
   onSearchSubmit = term => {
     const fetchPromise = fetch(
-      `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${term}&srlimit=15&format=json&origin=*`
+      `https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrsearch=${term}&gsrlimit=15&prop=extracts&exintro&explaintext&exsentences=1&origin=*`
     );
 
     fetchPromise
@@ -16,8 +16,8 @@ class App extends React.Component {
         return response.json();
       })
       .then(data => {
-        const articles = data.query.search;
-
+        console.log(data);
+        const articles = data.query.pages;
         this.setState({ articles: articles });
 
         console.log("state", this.state.articles);
@@ -49,4 +49,12 @@ class App extends React.Component {
 
 export default App;
 
-//style searchbar to center viewport
+
+// make sure HTML doesn't show up in 'snippet' object key 
+// refactor Wikipedia API
+// understand lifecycle events, only display data once fetched, (componentdidmount?)
+// refactor CSS file and proofread css
+// proofread entire application (also check if components should be functional or class-based)
+    // rename ArticleCard.js to ArticleSection.js
+// add comments detailing work process
+// edit Readme.txt file

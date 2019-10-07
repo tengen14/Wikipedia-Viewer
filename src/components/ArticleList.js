@@ -6,13 +6,16 @@ class ArticleList extends React.Component {
 
   getIds = props => {
     console.log("GETIDS FUNCTION RUNS");
-    const articles = this.props.articles;
+  
+    const articles = Object.values(this.props.articles);
+
+    console.log(articles);
 
     return articles.map(article => (
         <ArticleCard
           key={article.id}
           title={article.title}
-          snippet={article.snippet}
+          extract={article.extract}
           pageid={article.pageid}
         />
     ));
