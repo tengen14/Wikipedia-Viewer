@@ -6,6 +6,7 @@ const ArticleCard = props => {
     <div>
       <a
         href={`https://en.wikipedia.org/?curid=${props.pageid}`}
+        rel="noopener noreferrer"
         target="_blank"
       >
         <div className="ui segment">
