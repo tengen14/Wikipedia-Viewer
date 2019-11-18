@@ -44,7 +44,7 @@ class App extends React.Component {
 export default App;
 
 // understand lifecycle events, only display data once fetched, (componentdidmount?)
-// Push content up on submit
+
 // refactor CSS file and proofread css - remane css files
 // proofread entire application (also check if components should be functional or class-based)
 // add cross-browser functionality
