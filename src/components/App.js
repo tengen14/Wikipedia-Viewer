@@ -11,8 +11,11 @@ class App extends React.Component {
     )
       .then(response => response.json())
       .then(data => {
-        const articles = data.query.pages;
-        this.setState({ articles: articles });
+        if (!data.query) {
+          return null;
+        } else {
+          this.setState({ articles: data.query.pages });
+        }
       });
   };
 
@@ -43,9 +46,6 @@ class App extends React.Component {
 
 export default App;
 
-// understand lifecycle events, only display data once fetched, (componentdidmount?)
-
-// refactor CSS file and proofread css - remane css files
 // proofread entire application (also check if components should be functional or class-based)
 // add cross-browser functionality
 // add metadata
