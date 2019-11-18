@@ -27,6 +27,7 @@ class App extends React.Component {
               <a
                 id="random-search"
                 href="https://en.wikipedia.org/wiki/Special:Random"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 or click here for a random article
@@ -44,14 +45,12 @@ export default App;
 
 // understand lifecycle events, only display data once fetched, (componentdidmount?)
 // Push content up on submit
-// refactor CSS file and proofread css
+// refactor CSS file and proofread css - remane css files
 // proofread entire application (also check if components should be functional or class-based)
-// make sure keys match for list
 // add cross-browser functionality
 // add metadata
 // add screenreader capability
 // check media responsiveness
 // rename ArticleCard.js to ArticleSection.js
-// remane css files
 // add comments detailing work process
 // edit Readme.txt file

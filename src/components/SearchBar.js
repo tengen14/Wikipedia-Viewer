@@ -4,9 +4,9 @@ import "../styles/ArticleCard.css";
 class SearchBar extends React.Component {
   state = { term: "" };
 
-  onSubmitForm = (event) => {
+  onSubmitForm = event => {
     event.preventDefault();
-    ////////////////////////////////////
+
     this.props.onSubmit(this.state.term);
   };
 
