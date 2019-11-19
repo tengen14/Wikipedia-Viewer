@@ -13,8 +13,8 @@ class App extends React.Component {
       .then(response => response.json())
       .then(data => {
         if (!data.query) {
-          // data returns 'null' if search term doesn't match any article
-          return null;
+          // data returns empty array if search term doesn't match any article
+          return this.setState({ articles: [] });
         } else {
           // array of data returned from API call assigned to 'articles' state key
           this.setState({ articles: data.query.pages });
