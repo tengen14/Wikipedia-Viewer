@@ -50,4 +50,3 @@ class App extends React.Component {
 
 export default App;
 
-// edit Readme.txt file
