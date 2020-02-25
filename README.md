@@ -1,4 +1,4 @@
-![](./wikipedia-viewer.png)
+<img src="./wikipedia-viewer.png" height="400" width="400" />
 
 <i>See live project at thane-engen.com/wikipedia-viewer</i>
 
