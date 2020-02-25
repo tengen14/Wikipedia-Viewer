@@ -6,7 +6,8 @@
 
 # Wikipedia Article Searcher
 
-A basic searchbar used to find articles using the wikipedia API
+A basic searchbar used to find articles using the Wikipedia API. 
+Can also click on link that brings user to random Wikipedia article.
 
 Technologies used:
 
