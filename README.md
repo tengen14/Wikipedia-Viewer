@@ -1,6 +1,6 @@
 <img src="./wikipedia-viewer.png" height="300" width="300" />
 
-<i>See live project at thane-engen.com/wikipedia-viewer</i>
+<i>See project live at <a href="http://thane-engen.com/wikipedia-viewer">www.thane-engen.com/wikipedia-viewer</a></i>
 
 ***
 
