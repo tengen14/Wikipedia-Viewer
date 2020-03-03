@@ -1,4 +1,4 @@
-<img src="./wikipedia-viewer.png" height="400" width="400" />
+<img src="./wikipedia-viewer.png" height="300" width="300" />
 
 <i>See live project at thane-engen.com/wikipedia-viewer</i>
 
